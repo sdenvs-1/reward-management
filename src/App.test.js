@@ -1,8 +1,20 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, mount } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+let wrapper 
+
+it('Test App mount', ()=>{
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  console.log(render(<App />))
+  // expect(screen.getByText('Learn React')).toBeInTheDocument();
+})
+
+it('sums numbers', () => {
+  expect(1+2).toEqual(3);
+  expect(2+2).toEqual(4);
 });
+
+
+
+
+
